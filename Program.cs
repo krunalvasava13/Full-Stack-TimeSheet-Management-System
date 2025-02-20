@@ -56,7 +56,9 @@ builder.Services.AddScoped<ISuperUserRepository, SuperUserRepository>();
 
 builder.Services.AddHttpContextAccessor();
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-var isDevelopment = environment == Environments.Development;
+//var isDevelopment = environment == Environments.Development;
+var isDevelopment = true;
+
 
 if (!isDevelopment)
 {
